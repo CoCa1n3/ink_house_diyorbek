@@ -114,7 +114,7 @@ header {
   ul {
     display: flex;
     gap: 8px;
-    margin: 5px;  
+    margin: 5px;
   }
 }
 .index {
@@ -212,25 +212,25 @@ header {
   gap: 40px;
   align-items: start;
   padding-top: 40px;
-  h1 {
-    font-weight: 100;
-    font-size: 20px;
-    max-width: 500px;
-    width: 100%;
-    color: #fff;
-  }
-  img {
-    width: 100%;
-    max-width: 500px;
-  }
+}
+.tool__title {
+  font-weight: 100;
+  font-size: 20px;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+}
+.tool__img {
+  width: 100%;
+  max-width: 500px;
+}
 
-  p {
-    font-weight: 100;
-    font-size: 20px;
-    max-width: 500px;
-    width: 100%;
-    color: #fff;
-  }
+.tool_text {
+  font-weight: 100;
+  font-size: 20px;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
 }
 
 .bth {
