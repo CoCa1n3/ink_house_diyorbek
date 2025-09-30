@@ -1,170 +1,291 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="header_wrapper">
-          <img src="./img/Frame 85.svg" alt="" />
-          <ul class="header_ul">
-            <a class="header_meny" href=""><img src="./img/List.svg" alt=""></a>
-            <li>Репродукции</li>
-            <li>Новинки</li>
-            <li>О нас</li>
-            <img src="./img/Frame 217.svg" alt="" />
-          </ul>
-        </div>
-      </div>
-    </header>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- <section class="bird">
-  <div class="container">
-    <div class="bird_wrapper">
-      <img  class="bird_img" src="./img/Layer 0 1.png" alt="">
-          <div class="bird_text">
-            <h1>Реплики картин от<span>Ink. House</span></h1>
-            <p>Высокое качество отрисовки на плотной бумаге или льняном холсте. Редкие произведения, доступные цены.</p>
-            <button class="btn">Продукция</button>
-          </div>
-      </div>
-    </div>
-  </div>
- </section>
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+p {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #e1ede6;
+  padding: 50px 0;
+}
+
+.header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.header_ul {
+  display: flex;
+  gap: 40px;
+  @media (max-width: 576px) {
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #c3d1c6;
+    padding-top: 20px;
+  }
+  @media (max-width: 400px) {
+    li {
+      display: none;
+    }
+    a {
+      display: block;
+    }
+  }
+}
+
+.header_meny {
+  display: none;
+}
+
+.bird_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bird_img {
+  width: clamp(12.188rem, -7.716rem + 55.29vw, 33.75rem);
+
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
+
+.bird_text {
+  max-width: 540px;
+  width: 100%;
+
+  h1 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    max-width: 300px;
+    width: 100%;
+
+    span {
+      color: #598d66;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #86928b;
+    max-width: 330px;
+    width: 100%;
+  }
+}
+
+.btn {
+  padding: 20px 60px;
+  background-color: transparent;
+  color: #598d66;
+  border: 1px solid #598d66;
+}
+
+.produkt_wrapper {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  ul {
+    display: flex;
+    gap: 8px;
+    margin: 5px;
+  }
+}
+.index {
+  padding: 10px 20px;
+  font-size: 12px;
+  background-color: #376b44;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.stele {
+  padding: 10px 20px;
+  color: #000;
+  font-size: 12px;
+  background-color: #d4e8d9;
+  border-radius: 50px;
+}
+
+.admin {
+  padding: 10px 20px;
+  color: #000;
+  font-size: 12px;
+  background-color: #d4e8d9;
+  border-radius: 50px;
+}
+
+.produkt_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 35px 0;
+  gap: 20px;
+
+  @media (max-width: 720px) {
+    justify-content: center;
+  }
+}
+
+.produkt_text {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+  }
+}
+
+.produkt_card {
+  background-color: #e1ede6;
+  padding: 20px;
+  max-width: clamp(17.5rem, 16.364rem + 5.68vw, 20.625rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    color: #598d66;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  h4 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+}
+
+.tool {
+  background-image: url(./img/pic_background.png);
+  background-size: cover;
+  height: 700px;
+}
+
+.tool_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tool_text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: start;
+  padding-top: 40px;
+  font-weight: 100;
+  font-size: 20px;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+}
 
 
- <div class="produkt">
-  <div class="container">
-    <div class="produkt_wrapper">
-      <div class="produkt_text">
-        <h1>Репродукции</h1>
-             <ul>
-              <a class="index" href="">Франция</a>
-              <a class="stele" href="">Германия</a>
-              <a class="admin" href="">Англия</a>
-              </ul>
-              </div>
-      <div class="produkt_cards">
-        <div class="produkt_card">
-            <img src="./img/03 (11).jpg" alt="">
-             <h3>Марсель руссо</h3>
-              <h4>Охота Амура</h4>
-              <h1>Холст, масло (50х80)</h1>
-              <p>14 500 руб</p>
-              <button class="btn">В корзину</button>
-        </div>
-        <div class="produkt_card">
-          <img src="./img/03 (12).jpg" alt="">
-             <h3>Анри Селин</h3>
-              <h4>Дама с собачкой</h4>
-              <h1>Акрил, бумага (50х80)</h1>
-              <p>16 500 руб</p>
-              <button class="btn">В корзину</button>
-        </div>
-        <div class="produkt_card">
-          <img src="./img/03 (13).jpg" alt="">
-            <h3>Франсуа Дюпон</h3>
-              <h4>Дама с собачкой</h4>
-              <h1>Акрил, бумага (50х80)</h1>
-              <p>16 500 руб</p>
-              <button class="btn">В корзину</button>
-        </div>
-        <div class="produkt_card">
-          <img src="./img/03 (14).jpg" alt="">
-           <h3>Франсуа Дюпон</h3>
-              <h4>Процедура</h4>
-              <h1>Цветная литография (40х60)</h1>
-              <p>20 000 руб</p>
-              <button class="btn">В корзину</button>
-        </div>
-        <div class="produkt_card">
-          <img src="./img/03 (15).jpg" alt="">
-           <h3>Луи Детуш</h3>
-              <h4>Роза</h4>
-              <h1>Бумага, акрил (50х80)</h1>
-              <p>12 000 руб</p>
-              <button class="btn">В корзину</button>
-        </div>
-        <div class="produkt_card">
-          <img src="./img/03 (16).jpg" alt="">
-             <h3>Франсуа Дюпон</h3>
-              <h4>Птичья трапеза</h4>
-              <h1>Цветная литография (40х60)</h1>
-              <p>22 500 руб</p>
-              <button class="btn">В корзину</button>
-        </div>
-      </div>
-    </div>
-  </div>
- </div>
+.tool__img {
+  width: 100%;
+  max-width: 500px;
+}
 
- <div class="tool">
-  <div class="container">
-    <div class="toll_wrapper">
-      <div class="tool_text">
-      <img src="./img/Frame 252 (2).png" alt=""  >  
-      <h1>Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных рациональных ограничений. </h1>
-      <p>Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую востребованность направлений прогрессивного развития.</p>
-      <button class="bth">Ознакомиться</button>
-      </div>
-    </div>
-  </div>
- </div>
+.bth {
+  max-width: 200px;
+  width: 100%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #eedb6d;
+  color: #2c2d35;
+}
 
- <div class="box">
-  <div class="container">
-    <div class="box_wrapper">
-      <div class="box_card">
-      <img src="./img/Group 210.png"  class="roblox" alt="">
-      </div>
-      <div class="box_text">
-      <h1>Наша команда</h1>
-      <p>Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены отталкиваться от того, что консультация с широким активом.</p>
-      <img src="./img/Frame 254.png" class="robloh" alt="">
-      </div>
-    </div>
-  </div>
- </div>
+.box_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
 
- <div class="ink">
-  <div class="container">
-    <div class="ink_wrapper">
-      <div class="ink_card">
-        <img src="./img/Frame 85.svg" alt="">
-        <h1>+7 (999) 543-54-54</h1>
-        <p>Мастерская</p>
-      </div>
-      <div class="ink_card1">
-          <ul>
-              <li>Репродукции</li>
-              <li>Франция</li>
-              <li>Германия</li>
-              <li>Англия</li>
-            </ul>
+  @media (max-width: 860px) {
+    flex-direction: column;
+  }
+}
 
-            <ul>
-              <li>Новинки</li>
-              <li>2021</li>
-              <li>2020</li>
-            </ul>
-            <ul>
-              <li>О нас</li>
-              <li>Художники</li>
-              <li>Менеджеры</li>
-            </ul>
-            </div>
-            <div class="ink_card">
-              <img src="./img/Frame 263.png" alt="">
-            </div>
-    </div>
-  </div>
- </div>
+.box_text {
+  padding: 50px;
+  margin-top: 50px;
+  max-width: 630px;
+  width: 100%;
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    margin: 20px 0;
+  }
+}
 
- 
+.ink {
+  background-color: #e1ede6;
+}
 
-  </body>
-</html>
+.ink_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.ink_card1 {
+  display: flex;
+  gap: 30px;
+}
+
+.roblox {
+  max-width: 350px;
+  width: 100%;
+}
+
+.robloh {
+  max-width: 199px;
+  width: 100%;
+}
